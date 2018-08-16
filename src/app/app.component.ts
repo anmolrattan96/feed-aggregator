@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { HttpClient, HttpParams } from '@angular/common/http';
-import { error } from 'util';
-
+import { DataService} from './data.service';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -10,27 +8,19 @@ import { error } from 'util';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  formdata;
+  searchkey;
+  constructor(private newService:DataService){}
 
-
-  title = 'Aggregator';
-  private apiUrl = 'https://api.elsevier.com/content/search/scidir';
-  data: any = {};
-
-    constructor(public http: HttpClient){
-      console.log('Hello Fellow User');
-    }
-    
-    getData(){
-const params = new HttpParams()
-.set('query', 'nodejs').set('apiKey', '810d0d9a08e546708564d462c1a5246d');
-
-      return this.http.get<any[]>(this.apiUrl, {params} ).subscribe(data => {
-        this.data = data;
-      },
-      error => {
-
-      }  
-    );
+  set(data){
+  	this.newService.setData(data.search);
+  	this.searchkey = this.newService.getData();
   }
-}
 
+  ngOnInit(){
+  	this.formdata = new FormGroup({
+      search: new FormControl("Machine learning")
+  })	
+  }
+
+}
