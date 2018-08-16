@@ -1,27 +1,24 @@
 <div id="div">
-<div class="container">
-  <h3 *ngIf="searchkey; else elseBlock">Tweets on {{searchkey}}</h3>
-  <ng-template #elseBlock></ng-template>
-   <form class="col s4" >
-     <div *ngFor="let item of tweetsdata" class="col s12 m7">
+  <div class="container">
+    <h3 *ngIf="searchkey; else elseBlock">Tweets on {{searchkey}}</h3>
+    <ng-template #elseBlock></ng-template>
+    <form class="col s4">
+      <div *ngFor="let item of tweetsdata" class="col s12 m7">
 
-   <div class="card" id="tweet">
-     <div class="card-image">
-           <img id="img2"src={{item.user.profile_image_url}}>
- </div>
-       <div class="right-content" >
-   <span class="card-title">{{item.user.name}}</span>
-   <div class="card-content" id="content">
-         <p>{{item.text}}</p>
-       </div>
-     
-   </div>
- </div>
-<br>
-     </div>
-   </form>
+        <div class="card" id="tweet">
+          <div class="card-image">
+            <img id="img2" src={{item.user.profile_image_url}}>
+          </div>
+          <div class="right-content">
+            <span class="card-title">{{item.user.name}}</span>
+            <div class="card-content" id="content">
+              <p>{{item.text}}</p>
+            </div>
+
+          </div>
+        </div>
+        <br>
+      </div>
+    </form>
+  </div>
 </div>
-</div>
-
-
-

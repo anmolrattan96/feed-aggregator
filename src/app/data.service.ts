@@ -15,6 +15,4 @@ this.key = data;
   getData(){
   	return this.key;
   }
-
-
 }
