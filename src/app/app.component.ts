@@ -19,7 +19,7 @@ export class AppComponent {
 
   ngOnInit(){
   	this.formdata = new FormGroup({
-      search: new FormControl("Machine learning")
+      search: new FormControl()
   })	
   }
 
