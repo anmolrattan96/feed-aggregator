@@ -1,4 +1,4 @@
-#tweet{
+/* #tweet{
 	border-radius: 5%;
 	margin:6%;
 	margin-block-start: 1%;
@@ -38,7 +38,7 @@
 	  font-size: 18px;
 	  font-weight:bold;
 	/* margin:-7% 15%; */
-	margin :5% 10%;
+	/* margin :5% 10%;
 	
 	}
 	
@@ -103,4 +103,46 @@
 	body{
 		overflow: hidden;
 		
+	} */ 
+
+	#searchbar{
+		margin-top: 150px;
+		margin-bottom:5px;
+		margin-right:150px;
+		margin-left:200px;
+		background:Transparent;
+		max-width:45%;
 	}
+	button{
+		margin:0px;
+		align:center;
+	}
+	#searchbar:focus{
+		color:white;
+		border-color:Transparent;
+	}
+	footer{
+		align:center;
+	}
+	a{
+		color:#00cc99;
+		
+		
+	}
+	a:hover{
+	
+		text-decoration:none;
+	}
+	li{
+		border:solid white 1px;
+		border-radius:5px;
+		
+	}
+	#tabdiv{
+		margin-left: 39em;
+		margin-top:25px;
+	}
+	p{
+		color:white;
+	}
+	

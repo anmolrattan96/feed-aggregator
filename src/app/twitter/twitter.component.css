@@ -1,4 +1,4 @@
-#img2 {
+/* #img2 {
     width:70px;
     height:65px;
 } 
@@ -13,4 +13,29 @@
         padding:  5px;
         width: 950px;
     }
+    */
    
+   h3{
+       color: #238ce2;
+   }
+  
+   #tweet{
+    color:black;
+    
+    border: 1px solid #238ce2;
+     border-radius: 15px;
+     padding:  5px;
+     width: 950px;
+     opacity: 100%;
+     margin-left:5em;
+     
+
+} 
+#div{
+    background-color: white;
+    align-content: center;
+    margin-left: 8em;
+    margin-right: 8em;
+    border-radius: 15px;
+    padding-top:15px;
+}

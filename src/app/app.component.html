@@ -18,8 +18,8 @@
 <br><br>
 <router-outlet></router-outlet> 
 </div> -->
-
-<body>
+<!--Shivam code-->
+<!-- <body>
     <div>
         <div class="raw" id="header">
                 <form [formGroup]="formdata" (ngSubmit) = "set(formdata.value)">
@@ -65,11 +65,31 @@
     </div>
 
 
-</body>
+</body> -->
+<!--Abhishek Code-->
+
+<h1 style="color:white ;font-family: 'Parisienne', cursive;" align="center">Aggregator</h1>
+<div  align="center">
+    <form [formGroup]="formdata" (ngSubmit) = "set(formdata.value)">
+<input type="text" class="form-control form-rounded" placeholder="Search Here!" size="50" id="searchbar" name = "search" formControlName="search">
+<button class="btn btn-default" >Search</button>
+</form>
+<div id="tabdiv" align="center">
+<ul class="nav nav-pills nav-fill">
+  
+  <li><a routerLink="/tweets">Twitter</a></li>
+  <li><a routerLink="/news">YCombinator</a></li>
+  <li><a routerLink="/research">Research</a></li>
+</ul>
+</div>
 
 
 
-
+</div><br><br><br>
+<router-outlet></router-outlet>
+<div align="center">
+<footer style="color:white;position:relative;height:800px;">Made with <span style="color:crimson">&#10084;</span> at <a href="https://www.xoriant.com">Xoriant</a></footer>
+</div>
 
 
  
