@@ -2,3 +2,15 @@
     width:70px;
     height:65px;
 } 
+div{
+    margin:-50px 10px auto;
+    width: 1000px;
+    }
+    #tweet{
+        background-color:rgb(148, 209, 219);
+        border: 1px solid #238ce2;
+        border-radius: 15px;
+        padding:  5px;
+        width: 950px;
+    }
+   
