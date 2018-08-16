@@ -1,0 +1,10 @@
+<div class="container">          
+  <h3 *ngIf="searchkey; else elseBlock">Research on {{searchkey}}</h3>
+  <ng-template #elseBlock></ng-template>
+  <!-- <ol>
+<li *ngFor="let link of data">
+    <a  target="_blank">{{}}</a>
+</li>
+</ol> -->
+
+</div>
