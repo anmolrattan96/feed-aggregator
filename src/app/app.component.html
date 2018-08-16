@@ -1,22 +1,76 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+ <h3 *ngIf="searchkey; else elseBlock">User Entered: {{searchkey}}</h3>
+   <ng-template #elseBlock></ng-template>
+<!--
+<br>
+    <div id="id" class="container">
+   <form [formGroup]="formdata" (ngSubmit) = "set(formdata.value)">
+    <table>
+<tr> 
+  <td><input type = "text" class="form-control" name = "search" formControlName="search" ></td>
+ <td><button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Search</button></td>
+</tr>
+</table>
+</form>
+
+<br>
+<button class="btn btn-primary" routerLinkActive="active-link" routerLink = "/tweets">Tweets</button>&nbsp;
+<button class="btn btn-primary" routerLinkActive="active-link" routerLink = "/news">Hacker News</button>&nbsp;
+<button class="btn btn-primary" routerLinkActive="active-link" routerLink = "/research">Research</button>
+<br><br>
+<router-outlet></router-outlet> 
+</div> -->
+
+<body>
+    <div>
+        <div class="raw" id="header">
+                <form [formGroup]="formdata" (ngSubmit) = "set(formdata.value)">
+                <table>
+                     <tr>
+                            <td id="titletd"><p>Aggr</p> </td>
+                    <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 
+                                  
+                            <input type="text" class="form-control" name = "search" formControlName="search" placeholder="Search "/>
+                             <button type="submit" class="btn btn-info" id="td"><i class="fas fa-search"></i> Search</button>    
+                    </td>
+                    </tr>                              
+                    </table>  
+                    </form>
+      </div>
+
+    
+      <div class="container" id="router">
+            <router-outlet></router-outlet> 
+    </div>
+
+<div style="background: linear-gradient(to right, #30CFD0 0%, #238ce2 100%); width:300px;height:1200px;" id="links">
 
 
-<button type="button" (click) = getData()>Button</button>
+    <div>
+        <img  routerLink = "/tweets"  src="../assets/tweet.jpg" style="margin-top:14px 14px;margin-right:5px;height: 100%;width: 20%;border-radius:15px;  -webkit-animation: mymove 5s infinite;
+        animation: mymove 5s infinite;" id="tw"/><font style="font-size:25px;color: deepskyblue;margin:8px 13px;font-weight: bold;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Twitter</font>
+        &nbsp;&nbsp;
+    </div>
+    <br>
+    <div>       <img routerLink = "/news" src="../assets/y.png" style="margin-top:14px 14px;margin-right:5px;height:3%;width:20%;border-radius: 15px  ;-webkit-animation: mymove 5s infinite; 
+            animation: mymove 5s infinite;" id="hc"/><font style="font-size:25px;color: deepskyblue;margin:8px 13px;font-weight: bold;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">YCombinator</font>
+        &nbsp;&nbsp;
+    </div>
+    <br>
+    <div>      <img  routerLink = "/research" src="../assets/iee4.png" style="margin-top:14px 14px;margin-right:5px;height:3%;width:20%;border-radius:15px;  -webkit-animation: mymove 5s infinite;
+            animation: mymove 5s infinite;" id="ieee"/><font style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size:25px;color: deepskyblue;margin:8px 13px;font-weight: bold;">Research</font>
+        </div>           
+    </div>
+
+    </div>
+
+
+</body>
+
+
+
+
+
+
+ 
