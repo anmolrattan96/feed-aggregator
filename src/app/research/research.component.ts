@@ -36,7 +36,8 @@ export class ResearchComponent {
 
 
 
-  url = "https://api.elsevier.com/content/search/scidir?query=nodejs&apiKey=7f59af901d2d86f78a1fd60c1bf9426a&httpAccept=application%2Fjson";
+   url ='';
+  //= "https://api.elsevier.com/content/search/scidir?query=nodejs&apiKey=7f59af901d2d86f78a1fd60c1bf9426a&httpAccept=application%2Fjson";
 
 
   searchkey;
@@ -46,9 +47,10 @@ export class ResearchComponent {
   
   ngOnInit(){
    this.searchkey = this.newService.getData();
+   this.url = "https://api.elsevier.com/content/search/scidir?query="+this.searchkey+"&apiKey=7f59af901d2d86f78a1fd60c1bf9426a&httpAccept=application%2Fjson";
    this.httpClient.get(this.url).subscribe((res) => {
      this.data = res;
-     console.log(this.data['search-results'].entry[0]);
+     console.log(this.data['search-results']);
    });
 // this.data = JSON.stringify(this.data);
   
