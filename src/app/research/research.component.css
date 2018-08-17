@@ -1,4 +1,20 @@
 #div{
-    margin:-60px auto;
-    width: 1000px;
-    }
+    background-color: white;
+    align-content: center;
+    margin-left: 8em;
+    margin-right: 8em;
+    border-radius: 15px;
+    padding-top:15px;
+}
+#results{
+    color:black;
+    
+    border: 1px solid #238ce2;
+     border-radius: 15px;
+     padding:  5px;
+     width: 950px;
+     opacity: 100%;
+     margin-left:5em;
+     
+
+} 
