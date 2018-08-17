@@ -7,12 +7,12 @@
 
         <div class="card" id="tweet">
           <div class="card-image">
-            <img id="img2" src={{item.user.profile_image_url}}>
+            <img id="img2" src={{item.user.profile_image_url}} height=50, width=50>
           </div>
           <div class="right-content">
-            <span class="card-title">{{item.user.name}}</span>
-            <div class="card-content" id="content">
-              <p>{{item.text}}</p>
+            <span class="card-title" style="font-size: 1.5em"><i>@{{item.user.name}}</i></span>
+            <div class="card-content" id="content" style="font-size: 1.2em"><br>
+               {{item.text}}
             </div>
 
           </div>

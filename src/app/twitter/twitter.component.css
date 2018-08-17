@@ -21,10 +21,10 @@
   
    #tweet{
     color:black;
-    
+    background-color: white;
     border: 1px solid #238ce2;
      border-radius: 15px;
-     padding:  5px;
+     padding:  20px;
      width: 950px;
      opacity: 100%;
      margin-left:5em;
@@ -32,7 +32,7 @@
 
 } 
 #div{
-    background-color: white;
+    /* background-color: white; */
     align-content: center;
     margin-left: 8em;
     margin-right: 8em;
