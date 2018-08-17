@@ -1,4 +1,4 @@
-import { Component, Injectable } from '@angular/core';
+import { Component, Injectable, Renderer } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { map, catchError } from 'rxjs/operators';
@@ -19,7 +19,7 @@ export class ResearchComponent {
   
   searchkey;
   data: any;
-   constructor(private newService:DataService, private http: Http) { }
+   constructor(private newService:DataService, private http: Http,private ren : Renderer) { }
   
   someMethod(){
 
@@ -41,8 +41,10 @@ export class ResearchComponent {
      let temp1 = temp["dc:title"];
      let temp2 = temp["prism:teaser"]
      let temp3 = temp["prism:publicationName"]+", "+temp4;
-     document.getElementById("results").innerHTML += "<a href=\""+temp0+"\"><font size=4>"+temp1+"</font></b></a><br><h6><i><u>"+temp3+"</u><i></h6><font size=3>\""+temp2+"\"</font><br><br>";
-   }
+     document.createElement("ul")
+     document.getElementById("results").innerHTML += "<li style = 'border: 1px solid #238ce2; border-radius: 15px; background-color: white; padding: 2%;'><a href=\""+temp0+"\"><font style='font-weight:5px;' size=4><b>"+temp1+"</b></font></b></a><br><h6><i><u>"+temp3+"</u><i></h6><font size=3>\""+temp2+"\"</font><br><br></li><br>";
+
+    }
    })
   }
 } 
