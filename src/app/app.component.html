@@ -72,7 +72,7 @@
 <div  align="center">
     <form [formGroup]="formdata" (ngSubmit) = "set(formdata.value)">
 <input type="text" class="form-control form-rounded" placeholder="Search Here!" size="50" id="searchbar" name = "search" formControlName="search">
-<button class="btn btn-default" >Search</button>
+<button class="btn btn-default" routerLink="/research">Search</button>
 </form>
 <div id="tabdiv" align="center" >
 <ul class="nav nav-pills nav-fill">
