@@ -68,11 +68,11 @@
 </body> -->
 <!-- Code-->
 
-<a href="localhost:4200"><h1 style="color:white ;font-family: 'Parisienne', cursive;" align="center">Aggregator</h1></a>
+<a href="./index.html"><h1 style="color:white ;font-family: 'Parisienne', cursive;" align="center">Aggregator</h1></a>
 <div  align="center">
     <form [formGroup]="formdata" (ngSubmit) = "set(formdata.value)">
 <input type="text" class="form-control form-rounded" placeholder="Search Here!" size="50" id="searchbar" name = "search" formControlName="search">
-<button class="btn btn-default" routerLink="/research">Search</button>
+<button class="btn btn-default" >Search</button>
 </form>
 <div id="tabdiv" align="center" >
 <ul class="nav nav-pills nav-fill">
@@ -82,8 +82,6 @@
   <li><a routerLink="/research">Research</a></li>
 </ul>
 </div>
-
-
 
 </div><br><br><br>
 <router-outlet ></router-outlet>

@@ -1,10 +1,22 @@
-<div id="div">
-<div class="container">          
-  <h3 *ngIf="searchkey; else elseBlock">News on {{searchkey}}</h3>
+
+<div align = "center" id="div" style="border-radius:15px;">  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <div align = "center" id="div" style="border-radius:15px;">
+  <h3 *ngIf="searchkey; else elseBlock" align="left">News on {{searchkey}}</h3>
   <ng-template #elseBlock></ng-template>
+  <div id="results" align= "left">
 <li *ngFor="let links of news.hits">
-    <a href={{links.url}} target="_blank">{{links.title}}</a><br>
-    <p id="author">{{links.author}}</p>
+    <a href={{links.url}} target="_blank" style="font-family: Arial, Helvetica, sans-serif;font-size: 1.3em;"><b>{{links.title}}</b></a><br>
+    <h5 id="author">Author name: {{links.author}}</h5>
+    <p><i>{{links.title}}...</i></p><br>
 </li><br><br>
 </div>
 </div>
+
+   
+  
+
+  
+  
+  

@@ -14,7 +14,7 @@ export class AppComponent {
 
   set(data){
     if(data.search == null || data.search == "")
-    alert("Please enter a valid string") ;
+    alert("Please enter a valid string");
     else
     {
     this.newService.setData(data.search);
