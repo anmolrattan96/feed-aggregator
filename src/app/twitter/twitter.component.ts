@@ -16,7 +16,11 @@ tweetsdata;
   constructor(private newService:DataService, private http: Http) { }
 
   ngOnInit() {
-  	this.searchkey = this.newService.getData();
+    this.searchkey = this.newService.getData();
+    if(this.searchkey == null || this.searchkey == "")
+    alert("Please enter a valid string") ;
+    else
+    {
  
     var headers = new Headers();
     
@@ -34,5 +38,5 @@ tweetsdata;
  
   }
 
-
+  }
 }

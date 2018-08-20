@@ -16,11 +16,20 @@ news = {};
 
 ngOnInit(){
  this.searchkey = this.newService.getData();
+ if(this.searchkey == null || this.searchkey == "")
+  alert("Please enter a valid string") ;
+  else
+  {
  this.http.get('https://hn.algolia.com/api/v1/search_by_date?query='+this.searchkey+'&tags=story')
    .pipe(map((res:Response) => res.json())).subscribe(data => {
      this.news = data
+    //  this.news = this.news['hits']
+    // var author = this.news[0].author
+    // console.log(author)
      console.log(this.news)
+
     });
+}
 }
 
 }

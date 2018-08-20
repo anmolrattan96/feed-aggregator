@@ -13,7 +13,12 @@ export class AppComponent {
   constructor(private newService:DataService){}
 
   set(data){
-  	this.newService.setData(data.search);
+    if(data.search == null || data.search == "")
+    alert("Please enter a valid string") ;
+    else
+    {
+    this.newService.setData(data.search);
+    }
   	this.searchkey = this.newService.getData();
   }
 

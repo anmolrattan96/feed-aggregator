@@ -1,6 +1,10 @@
 
-
+<div class="container">
+<h3 *ngIf="searchkey; else elseBlock">Research on {{searchkey}}</h3>
+<ng-template #elseBlock></ng-template>
+</div>
 <div align = "center" id="div" style="border-radius:15px;">
+    
     <div id="results" align= "left" ></div>
 
   </div>

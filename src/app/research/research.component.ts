@@ -27,6 +27,10 @@ export class ResearchComponent {
 
   ngOnInit(){
    this.searchkey = this.newService.getData();
+   if(this.searchkey == null || this.searchkey == "")
+   alert("Please enter a valid string") ;
+   else
+   {
    this.url = "https://api.elsevier.com/content/search/scidir?query="+this.searchkey+"&apiKey=7f59af901d2d86f78a1fd60c1bf9426a&httpAccept=application%2Fjson";
    this.data = this.http.get(this.url).pipe(map((response: any) => response.json())).toPromise().then((res) => {
      this.data = res;
@@ -42,9 +46,10 @@ export class ResearchComponent {
      let temp2 = temp["prism:teaser"]
      let temp3 = temp["prism:publicationName"]+", "+temp4;
      document.createElement("ul")
-     document.getElementById("results").innerHTML += "<li style = 'border: 1px solid #238ce2; border-radius: 15px; background-color: white; padding: 2%;'><a href=\""+temp0+"\"><font style='font-weight:5px;' size=4><b>"+temp1+"</b></font></b></a><br><h6><i><u>"+temp3+"</u><i></h6><font size=3>\""+temp2+"\"</font><br><br></li><br>";
+     document.getElementById("results").innerHTML += "<li style = 'list-style: none;border: 1px solid #238ce2; border-radius: 15px; background-color: white; padding: 2%;'><a href=\""+temp0+"\"><font style='font-weight:5px;' size=4><b>"+temp1+"</b></font></b></a><br><h6><i><u>"+temp3+"</u><i></h6><font size=3>\""+temp2+"\"</font><br><br></li><br>";
 
     }
    })
   }
+}
 } 
