@@ -2,10 +2,8 @@
 <div class="container">          
   <h3 *ngIf="searchkey; else elseBlock">News on {{searchkey}}</h3>
   <ng-template #elseBlock></ng-template>
-  <ol>
 <li *ngFor="let links of news.hits">
     <a href={{links.url}} target="_blank">{{links.title}}</a>
-</li>
-</ol>
+</li><br><br>
 </div>
 </div>

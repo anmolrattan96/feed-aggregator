@@ -10,12 +10,16 @@ a{
     color:#238ce2;
 }
 ol{
-    background-color: white;
+   /* background-color: white; */
     border-radius: 5px;
     
 }
+
 li{
-    padding:10px;
-    margin-top:10px;
-    border-bottom: #238ce2 solid 1px;
+    margin: 1.4em;
+    border: 1px solid #238ce2; 
+    border-radius: 15px; 
+    background-color: white; 
+    padding: 2%;
+    list-style: none;
 }

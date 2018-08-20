@@ -17,7 +17,10 @@ news = {};
 ngOnInit(){
  this.searchkey = this.newService.getData();
  this.http.get('https://hn.algolia.com/api/v1/search_by_date?query='+this.searchkey+'&tags=story')
-   .pipe(map((res:Response) => res.json())).subscribe(data => this.news = data);
+   .pipe(map((res:Response) => res.json())).subscribe(data => {
+     this.news = data
+     console.log(this.news)
+    });
 }
 
 }
