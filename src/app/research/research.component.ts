@@ -46,7 +46,7 @@ export class ResearchComponent {
      let temp2 = temp["prism:teaser"]
      let temp3 = temp["prism:publicationName"]+", "+temp4;
      document.createElement("ul")
-     document.getElementById("results").innerHTML += "<li style = 'list-style: none;border: 1px solid #238ce2; border-radius: 15px; background-color: white; padding: 2%;'><a href=\""+temp0+"\"><font style='font-weight:5px;' size=4><b>"+temp1+"</b></font></b></a><br><h6><i><u>"+temp3+"</u><i></h6><font size=3>\""+temp2+"\"</font><br><br></li><br>";
+     document.getElementById("results").innerHTML += "<li style = 'list-style: none;border: 4px solid #238ce2; border-radius: 15px; background-color: white; padding: 2%;'><a href=\""+temp0+"\"><font style='font-weight:5px;' size=4><b>"+temp1+"</b></font></b></a><br><h6><i><u>"+temp3+"</u><i></h6><font size=3>\""+temp2+"\"</font><br><br></li><br>";
 
     }
    })
